@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import customers from "./memdb.js";
+import { getAll, post, put, deleteById } from "./memdb.js";
 import "./App.css";
 
 function log(message) {
@@ -8,6 +8,7 @@ function log(message) {
 
 export function App(params) {
   let blankCustomer = { id: -1, name: "", email: "", password: "" };
+  const [customers, setCustomers] = useState([]);
   const [formObject, setFormObject] = useState(blankCustomer);
 
   let mode = formObject.id >= 0 ? "Update" : "Add";
@@ -27,6 +28,7 @@ export function App(params) {
 
   let onCancelClick = function () {
     log("in onCancelClick()");
+    setFormObject(blankCustomer);
   };
 
   let onDeleteClick = function () {
