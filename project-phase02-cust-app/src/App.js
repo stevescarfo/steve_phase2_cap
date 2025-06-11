@@ -17,9 +17,20 @@ export function App(params) {
     log("in getCustomers()");
   };
 
+  // const handleListClick = function (item) {
+  //   log("in handleListClick()");
+  //   setFormObject(item);
+  // };
+
   const handleListClick = function (item) {
+    if (formObject.id === item.id) {
+      // If clicked item is already selected, unselect it
+      setFormObject(blankCustomer);
+    } else {
+      // Otherwise, select the clicked item
+      setFormObject(item);
+    }
     log("in handleListClick()");
-    setFormObject(item);
   };
 
   const handleInputChange = function (event) {
