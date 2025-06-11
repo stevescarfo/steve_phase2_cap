@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { getAll, post, put, deleteById } from "./memdb.js";
 import "./App.css";
 
@@ -12,9 +12,13 @@ export function App(params) {
   const [formObject, setFormObject] = useState(blankCustomer);
 
   let mode = formObject.id >= 0 ? "Update" : "Add";
+  useEffect(() => {
+    getCustomers();
+  }, []);
 
   const getCustomers = function () {
     log("in getCustomers()");
+    setCustomers(getAll());
   };
 
   // const handleListClick = function (item) {
