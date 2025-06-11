@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/steve_phase2_cap/static/css/main.1c9b3e01.css",
+    "main.js": "/steve_phase2_cap/static/js/main.5ccbf5bb.js",
+    "index.html": "/steve_phase2_cap/index.html",
+    "main.1c9b3e01.css.map": "/steve_phase2_cap/static/css/main.1c9b3e01.css.map",
+    "main.5ccbf5bb.js.map": "/steve_phase2_cap/static/js/main.5ccbf5bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c9b3e01.css",
+    "static/js/main.5ccbf5bb.js"
+  ]
+}
